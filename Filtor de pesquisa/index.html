@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Buscador de Filmes</h1>
+            <p class="subtitle">Busque seus filmes favoritos por categoria</p>
+        </header>
+
+        <!-- Busca -->
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-input" 
+                placeholder="Digite o nome do filme..."
+            >
+            <button class="search-btn" onclick="search()">Buscar</button>
+        </div>
+
+        <!-- Categorias -->
+        <div class="categories">
+            <button class="category-btn active" onclick="filterCategory('all')">Tudo</button>
+            <button class="category-btn" onclick="filterCategory('action')">Ação</button>
+            <button class="category-btn" onclick="filterCategory('comedy')">Comédia</button>
+            <button class="category-btn" onclick="filterCategory('drama')">Drama</button>
+            <button class="category-btn" onclick="filterCategory('horror')">Terror</button>
+            <button class="category-btn" onclick="filterCategory('sci_fi')">Ficção Científica</button>
+            <button class="category-btn" onclick="filterCategory('adventure')">Aventura</button>
+        </div>
+
+        <!-- Resultados -->
+        <div id="results" class="results">
+            <div class="loading">Carregando...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
