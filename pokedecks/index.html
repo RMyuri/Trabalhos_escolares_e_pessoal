@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokeDecks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>PokeDecks</h1>
+    <!-- Novo contador -->
+    <div id="totalContainer">
+      Total de Pokémons: <span id="totalCount">—</span>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button id="tab-search" class="active">Buscar por Nome</button>
+    <button id="tab-types">Buscar por Tipo</button>
+  </nav>
+
+  <main>
+    <!-- Aba 1: busca por nome -->
+    <section id="searchTab" class="tab-content">
+      <div class="search-box">
+        <input type="text" id="pokemonName" placeholder="Ex: pikachu">
+        <button id="btnSearch">Buscar</button>
+      </div>
+      <div id="searchResult" class="cards-container"></div>
+    </section>
+
+    <!-- Aba 2: busca por tipo -->
+    <section id="typesTab" class="tab-content hidden">
+      <div class="types-grid">
+        <!-- Botões de tipo gerados via script -->
+      </div>
+      <div id="typeResult" class="cards-container"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
